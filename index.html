@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.js Application</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>This is the Node.js Application that i deployed in EC2_instance</h1>
+    <div class="container">
+        
+        <p>Name: BHARATH.A</p>
+        <p>Reg No: 20MIC0055</p>
+        <p>Here is a simple factorial calculator:</p>
+        <input type="number" id="number" placeholder="Enter a number">
+        <button onclick="calculateFactorial()">Calculate Factorial</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function calculateFactorial() {
+            const number = document.getElementById('number').value;
+            let result = 1;
+
+            for (let i = 1; i <= number; i++) {
+                result *= i;
+            }
+
+            document.getElementById('result').innerText = `Factorial: ${result}`;
+        }
+    </script>
+</body>
+</html>
